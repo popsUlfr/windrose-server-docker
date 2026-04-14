@@ -22,7 +22,7 @@ docker run -d \
     -v ./windrose-wine-prefix:/wine-prefix \
     --restart unless-stopped \
     --stop-timeout 30 \
-    localhost/windrose-server:latest
+    localhost/windrose-server-docker:latest
 ```
 
 ### Quadlet
