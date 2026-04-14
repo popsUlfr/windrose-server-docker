@@ -9,7 +9,7 @@ Uses wine to run the server on linux and web vnc to access the server ui for fir
 ### Build the docker image
 
 ```sh
-docker build -t windrose-server:latest .
+docker build -t windrose-server-docker:latest .
 ```
 
 ### Run the server
@@ -79,5 +79,5 @@ docker run -d \
     -e UPDATE_ON_BOOT=false \
     --restart unless-stopped \
     --stop-timeout 30 \
-    localhost/windrose-server:latest
+    localhost/windrose-server-docker:latest
 ```
