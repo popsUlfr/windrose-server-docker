@@ -1,0 +1,14 @@
+[Container]
+ContainerName=windrose-server
+Image=localhost/windrose-server-docker:latest
+Network=host
+Pull=newer
+Volume=windrose-data:/windrose
+Volume=windrose-wine:/wine
+Volume=windrose-wine-prefix:/wine-prefix
+
+[Service]
+Restart=always
+
+[Install]
+WantedBy=default.target
