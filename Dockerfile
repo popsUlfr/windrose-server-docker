@@ -134,6 +134,8 @@ else
 fi
 
 if [[ "${UPDATE_ON_BOOT,,}" = true ]]; then
+    # Remove potentially corrupt appmanifest files before updating
+    rm -f /windrose/steamapps/*.acf || true
     echo "Updating Windrose Dedicated Server (App ID: ${APP_ID})..."
     su - steam -c "/home/steam/steamcmd/steamcmd.sh \
         +@sSteamCmdForcePlatformType windows \
