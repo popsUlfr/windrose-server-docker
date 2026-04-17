@@ -99,7 +99,10 @@ stderr_logfile=/dev/stderr
 stderr_logfile_maxbytes=0
 depends_on=xvfb
 stopwaitsecs=30
-stopsignal=INT
+
+[eventlistener:processes]
+command=sh -c "echo READY && read line && kill -SIGQUIT $PPID"
+events=PROCESS_STATE_STOPPED,PROCESS_STATE_EXITED,PROCESS_STATE_FATAL
 EOF
 
 # -------------------------------------------------------------------
