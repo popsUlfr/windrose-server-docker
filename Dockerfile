@@ -1,5 +1,11 @@
 FROM cm2network/steamcmd:latest
 
+LABEL maintainer="popsUlfr" \
+      name="popsulfr/windrose-server-docker" \
+      github="https://github.com/popsUlfr/windrose-server-docker" \
+      org.opencontainers.image.authors="popsUlfr" \
+      org.opencontainers.image.source="https://github.com/popsUlfr/windrose-server-docker"
+
 USER root
 
 # -------------------------------------------------------------------
