@@ -6,6 +6,14 @@ Uses wine to run the server on linux and web vnc to access the server ui for fir
 
 ## How to use
 
+### Pull the image
+
+```sh
+docker pull ghcr.io/popsulfr/windrose-server-docker:latest
+```
+
+or
+
 ### Build the docker image
 
 ```sh
@@ -22,7 +30,7 @@ docker run -d \
     -v ./windrose-wine-prefix:/wine-prefix \
     --restart unless-stopped \
     --stop-timeout 30 \
-    localhost/windrose-server-docker:latest
+    ghcr.io/popsulfr/windrose-server-docker:latest
 ```
 
 ### Quadlet
@@ -79,5 +87,5 @@ docker run -d \
     -e UPDATE_ON_BOOT=false \
     --restart unless-stopped \
     --stop-timeout 30 \
-    localhost/windrose-server-docker:latest
+    ghcr.io/popsulfr/windrose-server-docker:latest
 ```
